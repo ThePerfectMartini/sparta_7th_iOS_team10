@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		ME0cAg6cl/bTZmwXEVgMugDccUI=
+		TQshYULNsK2drdvxgRyE3H5lTf0=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		f7BlCNr1uSYXf/vSEyOZE3VYM0s=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -28,21 +28,21 @@
 		<data>
 		/CUoTuPQqqdexfyOT9lpJhV+2MQ=
 		</data>
+		<key>flutter_assets/image/minky.jpg</key>
+		<data>
+		0/o4Kw8qRCNURzOX27YtoFVKQH0=
+		</data>
+		<key>flutter_assets/image/roy.jpg</key>
+		<data>
+		75fO4eVJph3nlaFKVkrvFLEcCVg=
+		</data>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<data>
-<<<<<<< HEAD
 		dRka9t86+Ik10kMCLsudB3ofChY=
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		LWgPhbvO7ySuTupCFrqLbgMtZAs=
-=======
-		iE/Ls6ZCbUNpDVZNZZePWZJrFU4=
-		</data>
-		<key>flutter_assets/kernel_blob.bin</key>
-		<data>
-		7DR5vKCoysPFKOP4o2tl5GP/4Gk=
->>>>>>> origin/feature/eunseo
+		p8ArykHYLLsDT7tk5KC/vqozY00=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -63,14 +63,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AK9VrT1vIYmP534P8JLRoc2lLJQbaGDpko1FyK+MCV0=
+			ksuuN+dK8mShwmwcoptkobKbR1gFe39nsvjdyS5wO2c=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			bN5vVXjyAPl/mQpxFDfOxyEBo7EGHlldcyhdbicbaCg=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -94,26 +94,32 @@
 			2YZbZxoJ1oPROoYwidiCXg9ho3aWzl19RIvIAjqmJFM=
 			</data>
 		</dict>
+		<key>flutter_assets/image/minky.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mgft8QRvsfZPyTnpikVh6y6s+M3qVRxUpaEiU7zkyM0=
+			</data>
+		</dict>
+		<key>flutter_assets/image/roy.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tvnIj0ZJJVsBk7e0cYtZVy3OMdC29/VRQl26BbicL30=
+			</data>
+		</dict>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
 			Pdp3wvU0CLVp+3Afd6I6QxM36Oe5dQcuavhGP5QJ6Ec=
-=======
-			IS1N6DNrJD83/wtVyIXrVhNS2anREgkxrJXQXI3RUWM=
->>>>>>> origin/feature/eunseo
 			</data>
 		</dict>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< HEAD
-			H3nOf4JLkksT1D+vC9KlM5xqzmAKxhOZ7Nh2RGug/QY=
-=======
-			SVISRBze6UVS6TmmjgqnopRCNvTX/PRah2xo3RyOK2A=
->>>>>>> origin/feature/eunseo
+			X9TAeKK7gZPYGUmdPqaTOBOUl1hv8gGAAOJOKdYIboY=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
