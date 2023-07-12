@@ -172,11 +172,15 @@ class _kspState extends State<ksp> {
                                     const Duration(milliseconds: 200), () {
                                   print('Hello, world');
                                   showDialog(
+                                    barrierColor: Colors.grey.withOpacity(0.5),
                                     context: context,
                                     barrierDismissible: true,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
-                                        content: DetailedPage(),
+                                        backgroundColor: Colors.transparent,
+                                        content: DetailedPage(
+                                          deco: roundBoxDeco,
+                                        ),
                                       );
                                     },
                                   );
@@ -239,7 +243,10 @@ class _kspState extends State<ksp> {
 class DetailedPage extends StatelessWidget {
   const DetailedPage({
     super.key,
+    required this.deco,
   });
+
+  final deco;
 
   @override
   Widget build(BuildContext context) {
@@ -247,9 +254,23 @@ class DetailedPage extends StatelessWidget {
       print('Hello, world');
     });
     return Container(
+      decoration: deco,
       width: 300,
-      height: 300,
-      child: Text("발표잘함"),
+      height: 200,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "발표를 잘합니다",
+            style: TextStyle(fontSize: 30, color: Colors.white),
+          ),
+          Text(
+            "발표때 긴장을 잘 안합니다. \n 물론 완전 안하는건 아니랍니다. \n 임기응변을 잘 하는편입니다.",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white),
+          ),
+        ],
+      ),
     );
   }
 }
