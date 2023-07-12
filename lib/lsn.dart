@@ -10,7 +10,12 @@ class lsn extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Text("이상남입니다."),
+        child: Column(
+          children: [
+            Text("이상남입니다."),
+            Text("테스트 추가입니다."),
+          ],
+        ),
       ),
     );
   }
