@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class ksp extends StatelessWidget {
+class ksp extends StatefulWidget {
   const ksp({
     super.key,
   });
 
   @override
+  State<ksp> createState() => _kspState();
+}
+
+class _kspState extends State<ksp> {
+  @override
   Widget build(BuildContext context) {
+    //시스템오버레이 (시간 와이파이 배터리 색상)
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+    //박스데코레이션 변수저장
     BoxDecoration roundBoxDeco = BoxDecoration(
+        // 컬려 변경시 모두 바뀜
         color: Colors.green[600],
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.transparent, width: 1),
@@ -151,12 +161,35 @@ class ksp extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            decoration: roundBoxDeco,
+                          Ink(
                             width: 150,
                             height: 200,
-                            child: Center(
-                              child: CenterText(textInBox: "발표\n잘함"),
+                            decoration: roundBoxDeco,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(20),
+                              onTap: () {
+                                Future.delayed(
+                                    const Duration(milliseconds: 200), () {
+                                  print('Hello, world');
+                                  showDialog(
+                                    context: context,
+                                    barrierDismissible: true,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        content: DetailedPage(),
+                                      );
+                                    },
+                                  );
+                                });
+                              },
+                              child: Container(
+                                //decoration: roundBoxDeco,
+                                width: 150,
+                                height: 200,
+                                child: Center(
+                                  child: CenterText(textInBox: "발표\n잘함"),
+                                ),
+                              ),
                             ),
                           ),
                           Container(
@@ -203,6 +236,24 @@ class ksp extends StatelessWidget {
   }
 }
 
+class DetailedPage extends StatelessWidget {
+  const DetailedPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 500), () {
+      print('Hello, world');
+    });
+    return Container(
+      width: 300,
+      height: 300,
+      child: Text("발표잘함"),
+    );
+  }
+}
+
 class CenterText extends StatelessWidget {
   const CenterText({
     super.key,
@@ -216,7 +267,7 @@ class CenterText extends StatelessWidget {
     return Center(
       child: Text(
         textInBox,
-        style: TextStyle(fontSize: 25, color: Colors.lime[50]),
+        style: TextStyle(fontSize: 40, color: Colors.lime[50]),
       ),
     );
   }
