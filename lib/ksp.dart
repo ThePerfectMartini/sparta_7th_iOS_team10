@@ -183,6 +183,9 @@ class _kspState extends State<ksp> {
                                           backgroundColor: Colors.transparent,
                                           content: DetailedPage(
                                             deco: roundBoxDeco,
+                                            title: "발표를 잘합니다.",
+                                            content:
+                                                "임기응변을 잘합니다. 발표때 크게 긴장하지 않습니다.",
                                           ),
                                         );
                                       },
@@ -199,12 +202,42 @@ class _kspState extends State<ksp> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: roundBoxDeco,
+                            Ink(
                               width: 150,
                               height: 200,
-                              child: Center(
-                                child: CenterText(textInBox: "소통\n원만"),
+                              decoration: roundBoxDeco,
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(20),
+                                onTap: () {
+                                  Future.delayed(
+                                      const Duration(milliseconds: 200), () {
+                                    showDialog(
+                                      barrierColor:
+                                          Colors.grey.withOpacity(0.5),
+                                      context: context,
+                                      barrierDismissible: true,
+                                      builder: (BuildContext context) {
+                                        return AlertDialog(
+                                          backgroundColor: Colors.transparent,
+                                          content: DetailedPage(
+                                            deco: roundBoxDeco,
+                                            title: "소통을 잘합니다.",
+                                            content:
+                                                "말 걸어주시면 대답 정말 잘합니다. 말도 많이 겁니다. \n 상대방의 의견을 최대한 존중하려고 합니다.",
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  });
+                                },
+                                child: Container(
+                                  //decoration: roundBoxDeco,
+                                  width: 150,
+                                  height: 200,
+                                  child: Center(
+                                    child: CenterText(textInBox: "소통\n원만"),
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -215,18 +248,82 @@ class _kspState extends State<ksp> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Container(
-                              decoration: roundBoxDeco,
+                            Ink(
                               width: 150,
                               height: 200,
-                              child: CenterText(textInBox: "공평\n주의"),
-                            ),
-                            Container(
                               decoration: roundBoxDeco,
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(20),
+                                onTap: () {
+                                  Future.delayed(
+                                      const Duration(milliseconds: 200), () {
+                                    print('Hello, world');
+                                    showDialog(
+                                      barrierColor:
+                                          Colors.grey.withOpacity(0.5),
+                                      context: context,
+                                      barrierDismissible: true,
+                                      builder: (BuildContext context) {
+                                        return AlertDialog(
+                                          backgroundColor: Colors.transparent,
+                                          content: DetailedPage(
+                                            deco: roundBoxDeco,
+                                            title: "공평이 답이다!",
+                                            content:
+                                                "물론 모두의 능력에 따라 적당하게 분배되는것이 필요하겠지만, \n 근본은 공평하게!",
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  });
+                                },
+                                child: Container(
+                                  //decoration: roundBoxDeco,
+                                  width: 150,
+                                  height: 200,
+                                  child: Center(
+                                    child: CenterText(textInBox: "공평\n주의"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Ink(
                               width: 150,
                               height: 150,
-                              child: Center(
-                                child: CenterText(textInBox: "할말\n꼭함"),
+                              decoration: roundBoxDeco,
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(20),
+                                onTap: () {
+                                  Future.delayed(
+                                      const Duration(milliseconds: 200), () {
+                                    print('Hello, world');
+                                    showDialog(
+                                      barrierColor:
+                                          Colors.grey.withOpacity(0.5),
+                                      context: context,
+                                      barrierDismissible: true,
+                                      builder: (BuildContext context) {
+                                        return AlertDialog(
+                                          backgroundColor: Colors.transparent,
+                                          content: DetailedPage(
+                                            deco: roundBoxDeco,
+                                            title: "할말은 합니다!",
+                                            content:
+                                                "물론 제 의견을 관철한다는 것이 아닌 \n 뭔가 아니다 싶은 것은 숨기지 않고 말합니다!",
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  });
+                                },
+                                child: Container(
+                                  //decoration: roundBoxDeco,
+                                  width: 150,
+                                  height: 200,
+                                  child: Center(
+                                    child: CenterText(textInBox: "할말\n꼭함"),
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -248,9 +345,13 @@ class DetailedPage extends StatelessWidget {
   const DetailedPage({
     super.key,
     required this.deco,
+    required this.title,
+    required this.content,
   });
 
   final deco;
+  final String title;
+  final String content;
 
   @override
   Widget build(BuildContext context) {
@@ -265,11 +366,11 @@ class DetailedPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "발표를 잘합니다",
+            title,
             style: TextStyle(fontSize: 30, color: Colors.white),
           ),
           Text(
-            "발표때 긴장을 잘 안합니다. \n 물론 완전 안하는건 아니랍니다. \n 임기응변을 잘 하는편입니다.",
+            content,
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white),
           ),
