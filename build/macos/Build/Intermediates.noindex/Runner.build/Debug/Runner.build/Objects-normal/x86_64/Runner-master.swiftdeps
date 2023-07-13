@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
-options: "e5e8f01249bdaefa7b0cb5beac22b5c2f030297e45bdb53d9466c39a32010920"
-build_start_time: [1688978030, 282225000]
-build_end_time: [1688978078, 198003000]
-inputs:
-  "/Users/baeeunseo/sparta_iOS/sparta_7th_iOS_team10/macos/Flutter/GeneratedPluginRegistrant.swift": [1688977935, 699440031]
-  "/Users/baeeunseo/sparta_iOS/sparta_7th_iOS_team10/macos/Runner/AppDelegate.swift": [1688977429, 64099711]
-  "/Users/baeeunseo/sparta_iOS/sparta_7th_iOS_team10/macos/Runner/MainFlutterWindow.swift": [1688977429, 69423761]
